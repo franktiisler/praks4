@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo "Sisesta kandiku pikkus cm: "
+read apikkus
+echo "sisesta kandiku laius cm: "
+read alaius
+echo "Kupsise suurus cm (pikkus * laius): "
+read pkupsis korda  lkupsis
+echo "Kihtide arv: "
+read kiht
+echo "Kupsiste kogus pakis: "
+read kogus
+
+kandik=`expr $apikkus \* $alaius`
+kupsis=`expr $pkupsis \* $lkupsis`
+ykiht=`expr $kandik / $kupsis`
+nkiht=`expr $ykiht \* $kiht`
+pakk=`expr $nkiht / $kogus`
+echo "Vaja laheb $pakk pakki kupsiseid."
